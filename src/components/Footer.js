@@ -1,48 +1,44 @@
-import React from 'react';
-import "../components/styles/Footer.css";
-import Logo from "../components/assets/logo.png";
+import Logo from '../images/logo_footer.png'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  return (
-    <div>
-        <div className="footer-background">
-            <div className="footer-container">
-                <img src={ Logo } alt="Little Lemon logo" />
-                <p>Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally sourced menu with daily specials.</p>
-                <div className="footer-content">
-                    <div className="locations">
-                        <h5>LOCATIONS</h5>
-                        <ul>
-                            <li>Accra</li>
-                            <li>Kumasi</li>
-                            <li>Cape Coast</li>
-                            <li>Tamale</li>
-                        </ul>
-                    </div>
-                    <div className="opening-times">
-                        <h5>OPENING TIMES</h5>
-                        <ul>
-                            <li>Mon - Wed: 10:30AM - 12:00AM</li>
-                            <li>Fri: 12:00PM - 1:00AM</li>
-                            <li>Sat - Sun: 10:30AM - 12:00AM</li>
-                        </ul>
-                    </div>
-                    <div className="contact">
-                        <h5>CONTACT US</h5>
-                        <ul>
-                            <li>96 Abafom Road, North Ridge - Accra</li>
-                            <li>Tel: 020 7928 0678</li>
-                            <li>Email: info@littlelemon.com</li>
-                        </ul>
-                    </div>
+    return (
+        <footer>
+          <div className="container">
+            <div className="left">
+                <img src={Logo} alt="Footer Logo"/>
             </div>
-            <div className="copyright">
-                <p>© 2023 Little Lemon Ltd. All rights reserved.</p>
+            <div className="right">
+              <div>
+                <h3>Doormat Navigation</h3>
+                <ul>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/booking">About</Link></li>
+                  <li><Link to="/booking">Menu</Link></li>
+                  <li><Link to="/booking">Reservations</Link></li>
+                  <li><Link to="/booking">Order Online</Link></li>
+                  <li><Link to="/booking">Login</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3>Contact</h3>
+                <ul>
+                  <li><Link to="/booking">Address</Link></li>
+                  <li><Link to="/booking">Phone number</Link></li>
+                  <li><Link to="/booking">Email</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3>Social Media Links</h3>
+                <ul>
+                  <li><Link to="/booking">Address</Link></li>
+                  <li><Link to="/booking">Phone number</Link></li>
+                  <li><Link to="/booking">Email</Link></li>
+                </ul>
+              </div>
             </div>
-        </div>
-        </div>
-    </div>
-  )
-}
-
-export default Footer
+          </div>
+        </footer>
+    );
+  };
+  export default Footer;
